@@ -1,0 +1,102 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://scripts/Fish.gd" type="Script" id=1]
+[ext_resource path="res://scripts/PlayerFish.gd" type="Script" id=2]
+[ext_resource path="res://scripts/FishSystem.gd" type="Script" id=3]
+[ext_resource path="res://resources/Sprites/FishGeneric.png" type="Texture" id=4]
+
+[sub_resource type="StyleBoxFlat" id=41]
+bg_color = Color( 0, 1, 0.0666667, 1 )
+
+[sub_resource type="StyleBoxFlat" id=42]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="RectangleShape2D" id=46]
+extents = Vector2( 3, 2 )
+
+[sub_resource type="RectangleShape2D" id=43]
+extents = Vector2( 3, 2 )
+
+[sub_resource type="RectangleShape2D" id=44]
+extents = Vector2( 2, 2 )
+
+[sub_resource type="RectangleShape2D" id=45]
+extents = Vector2( 1, 2 )
+
+[node name="FishSystem" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_left = -103.0
+margin_top = 164.0
+margin_right = -71.0
+margin_bottom = 168.0
+custom_styles/fg = SubResource( 41 )
+custom_styles/bg = SubResource( 42 )
+percent_visible = false
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -103.0
+margin_top = 169.0
+margin_right = -71.0
+margin_bottom = 173.0
+color = Color( 0.552941, 0.552941, 0.552941, 1 )
+
+[node name="PlayerFish" type="KinematicBody2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+script = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerFish"]
+position = Vector2( -100, 171 )
+shape = SubResource( 46 )
+
+[node name="Detect" type="Area2D" parent="PlayerFish"]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerFish/Detect"]
+position = Vector2( -100, 171 )
+shape = SubResource( 43 )
+
+[node name="ColorRect" type="ColorRect" parent="PlayerFish"]
+margin_left = -103.0
+margin_top = 169.0
+margin_right = -97.0
+margin_bottom = 173.0
+color = Color( 0.00784314, 1, 0, 1 )
+
+[node name="Fish" type="KinematicBody2D" parent="."]
+collision_layer = 2
+collision_mask = 0
+script = ExtResource( 1 )
+speed = 18
+
+[node name="Sprite" type="Sprite" parent="Fish"]
+position = Vector2( -101, 171 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Fish"]
+position = Vector2( -101, 171 )
+shape = SubResource( 44 )
+
+[node name="Left" type="StaticBody2D" parent="."]
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Left"]
+position = Vector2( -104, 171 )
+shape = SubResource( 45 )
+
+[node name="Right" type="StaticBody2D" parent="."]
+position = Vector2( 34, 0 )
+collision_layer = 4
+collision_mask = 4
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Right"]
+position = Vector2( -104, 171 )
+shape = SubResource( 45 )
+
+[connection signal="body_entered" from="PlayerFish/Detect" to="PlayerFish" method="_on_Detect_body_entered"]
+[connection signal="body_exited" from="PlayerFish/Detect" to="PlayerFish" method="_on_Detect_body_exited"]

@@ -1,0 +1,45 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://resources/Capsule-gxmR6.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://scripts/NotificationItem.gd" type="Script" id=2]
+[ext_resource path="res://resources/Sprites/notification.png" type="Texture" id=3]
+[ext_resource path="res://resources/Sprites/FishGeneric.png" type="Texture" id=4]
+
+[sub_resource type="DynamicFont" id=41]
+size = 7
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxLine" id=42]
+color = Color( 0, 0.054902, 1, 1 )
+
+[sub_resource type="StyleBoxLine" id=43]
+
+[node name="Notification" type="Node2D"]
+position = Vector2( 159, 92 )
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 3 )
+
+[node name="Sprite" type="Sprite" parent="Sprite"]
+position = Vector2( 103, -78 )
+texture = ExtResource( 4 )
+
+[node name="RichTextLabel" type="RichTextLabel" parent="Sprite"]
+margin_left = 111.0
+margin_top = -82.0
+margin_right = 157.0
+margin_bottom = -68.0
+custom_fonts/normal_font = SubResource( 41 )
+text = "novo item"
+scroll_active = false
+
+[node name="ProgressBar" type="ProgressBar" parent="."]
+margin_left = 94.0
+margin_top = -71.0
+margin_right = 157.0
+margin_bottom = -57.0
+custom_styles/fg = SubResource( 42 )
+custom_styles/bg = SubResource( 43 )
+value = 100.0
+percent_visible = false

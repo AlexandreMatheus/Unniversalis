@@ -1,0 +1,358 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://scripts/Menu.gd" type="Script" id=1]
+[ext_resource path="res://resources/Sprites/MenuBackgorund2.png" type="Texture" id=2]
+[ext_resource path="res://resources/Capsule-gxmR6.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://resources/teclas/S.png" type="Texture" id=4]
+[ext_resource path="res://resources/teclas/E.png" type="Texture" id=5]
+[ext_resource path="res://resources/teclas/W.png" type="Texture" id=6]
+[ext_resource path="res://resources/teclas/ESCAPE.png" type="Texture" id=7]
+[ext_resource path="res://resources/teclas/D.png" type="Texture" id=8]
+[ext_resource path="res://resources/teclas/Sprite-0012.png" type="Texture" id=9]
+[ext_resource path="res://resources/bandeiras/brasil.png" type="Texture" id=10]
+[ext_resource path="res://resources/bandeiras/estados.png" type="Texture" id=11]
+[ext_resource path="res://resources/1. Free Hologram Interface Wenrexa/Card X3/Card X6.png" type="Texture" id=12]
+[ext_resource path="res://resources/planets/terra_purple_animation/new_animatedtexture.tres" type="Texture" id=13]
+[ext_resource path="res://resources/Sprites/MenuBackgorundV3.png" type="Texture" id=14]
+[ext_resource path="res://resources/Sprites/sol.png" type="Texture" id=15]
+
+[sub_resource type="Animation" id=7]
+resource_name = "Idle"
+length = 4.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.2, 2.7, 4.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.454902 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.631373 ) ]
+}
+
+[sub_resource type="Animation" id=8]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=9]
+resource_name = "Idle"
+length = 24.0
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 6, 12, 18.1, 24 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, 2.0, 0.0, -2.0, 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 6, 12, 18.1, 24 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 257, 85 ), Vector2( 257, 83 ), Vector2( 257, 83.6667 ), Vector2( 257, 86.3444 ), Vector2( 257, 85 ) ]
+}
+
+[sub_resource type="Animation" id=10]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:rotation_degrees")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0.0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath(".:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Vector2( 257, 85 ) ]
+}
+
+[sub_resource type="DynamicFont" id=4]
+size = 13
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=1]
+size = 20
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 9
+font_data = ExtResource( 3 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 28
+font_data = ExtResource( 3 )
+
+[node name="Control" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_horizontal_guides_": [ 81.0 ]
+}
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_right = 320.0
+margin_bottom = 181.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="MenuBackgorund1" type="Sprite" parent="."]
+visible = false
+position = Vector2( 160, 90.5 )
+scale = Vector2( 0.266667, 0.22625 )
+texture = ExtResource( 2 )
+
+[node name="MenuBackgorund2" type="Sprite" parent="."]
+position = Vector2( 160, 90.5 )
+scale = Vector2( 0.266667, 0.22625 )
+texture = ExtResource( 14 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="MenuBackgorund2"]
+anims/Idle = SubResource( 7 )
+anims/RESET = SubResource( 8 )
+
+[node name="Sol" type="Sprite" parent="."]
+position = Vector2( 160, 90 )
+scale = Vector2( 0.266667, 0.22625 )
+texture = ExtResource( 15 )
+
+[node name="Terran" type="Sprite" parent="."]
+position = Vector2( 257, 85 )
+scale = Vector2( 2.41667, 2.41667 )
+texture = ExtResource( 13 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Terran"]
+anims/Idle = SubResource( 9 )
+anims/RESET = SubResource( 10 )
+
+[node name="Menu" type="Node2D" parent="."]
+
+[node name="ButtonContainer" type="VBoxContainer" parent="Menu"]
+anchor_top = 0.5
+anchor_bottom = 0.5
+margin_left = 36.0
+margin_top = 85.0
+margin_right = 116.0
+margin_bottom = 177.0
+
+[node name="StartButton" type="Button" parent="Menu/ButtonContainer"]
+margin_right = 80.0
+margin_bottom = 20.0
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+
+[node name="Label" type="Label" parent="Menu/ButtonContainer/StartButton"]
+anchor_bottom = 1.0
+margin_right = 104.0
+custom_fonts/font = SubResource( 4 )
+text = "KEY_START"
+
+[node name="ContinueButton" type="Button" parent="Menu/ButtonContainer"]
+modulate = Color( 0.360784, 0.360784, 0.360784, 1 )
+margin_top = 24.0
+margin_right = 80.0
+margin_bottom = 44.0
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+
+[node name="Label" type="Label" parent="Menu/ButtonContainer/ContinueButton"]
+anchor_bottom = 1.0
+margin_right = 140.0
+custom_fonts/font = SubResource( 4 )
+text = "KEY_CONTINUE"
+
+[node name="OptionsButton" type="Button" parent="Menu/ButtonContainer"]
+margin_top = 48.0
+margin_right = 80.0
+margin_bottom = 68.0
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+
+[node name="Label" type="Label" parent="Menu/ButtonContainer/OptionsButton"]
+anchor_bottom = 1.0
+margin_right = 129.0
+custom_fonts/font = SubResource( 4 )
+text = "KEY_OPTIONS"
+
+[node name="QuitButton" type="Button" parent="Menu/ButtonContainer"]
+margin_top = 72.0
+margin_right = 80.0
+margin_bottom = 92.0
+focus_mode = 0
+enabled_focus_mode = 0
+flat = true
+
+[node name="Label" type="Label" parent="Menu/ButtonContainer/QuitButton"]
+anchor_bottom = 1.0
+margin_right = 92.0
+custom_fonts/font = SubResource( 4 )
+text = "KEY_QUIT"
+
+[node name="Title" type="RichTextLabel" parent="Menu"]
+margin_left = -176.0
+margin_top = 41.0
+margin_right = 371.0
+margin_bottom = 66.0
+custom_fonts/normal_font = SubResource( 1 )
+bbcode_enabled = true
+bbcode_text = "[center] Unniversalis [/center]"
+text = " Unniversalis "
+
+[node name="Subtitle" type="Label" parent="Menu"]
+margin_left = 3.0
+margin_top = 64.0
+margin_right = 193.0
+margin_bottom = 75.0
+custom_fonts/font = SubResource( 5 )
+text = "KEY_SUBTITLE"
+align = 1
+valign = 1
+
+[node name="LanguageButtonPT" type="Button" parent="Menu"]
+margin_left = 282.0
+margin_top = -3.0
+margin_right = 326.0
+margin_bottom = 19.0
+icon = ExtResource( 10 )
+flat = true
+
+[node name="LanguageButtonES" type="Button" parent="Menu"]
+visible = false
+margin_left = 282.0
+margin_top = -3.0
+margin_right = 326.0
+margin_bottom = 19.0
+icon = ExtResource( 11 )
+flat = true
+
+[node name="Options" type="Node2D" parent="."]
+visible = false
+position = Vector2( 7, 0 )
+
+[node name="Panel" type="Sprite" parent="Options"]
+position = Vector2( 154, 85 )
+scale = Vector2( 0.357769, 0.450345 )
+texture = ExtResource( 12 )
+
+[node name="BackButton" type="Button" parent="Options/Panel"]
+margin_left = -296.0
+margin_top = -162.0
+margin_right = -179.0
+margin_bottom = -126.0
+flat = true
+
+[node name="Label" type="Label" parent="Options/Panel/BackButton"]
+anchor_left = 0.041
+anchor_top = 0.2
+anchor_right = 1.041
+anchor_bottom = 1.0
+margin_left = -0.0340002
+margin_right = -0.0340042
+custom_fonts/font = SubResource( 6 )
+text = "Back"
+
+[node name="Label2" type="Label" parent="Options/Panel"]
+anchor_left = 0.108
+anchor_top = -4.35
+anchor_right = 1.108
+anchor_bottom = -4.35
+margin_left = -147.733
+margin_top = 1760.08
+margin_right = -147.733
+margin_bottom = 1776.08
+custom_fonts/font = SubResource( 4 )
+text = "Interagir"
+
+[node name="Label3" type="Label" parent="Options/Panel"]
+anchor_left = 0.108
+anchor_top = -4.35
+anchor_right = 1.108
+anchor_bottom = -4.35
+margin_left = -147.733
+margin_top = 1669.03
+margin_right = -147.733
+margin_bottom = 1685.03
+custom_fonts/font = SubResource( 4 )
+text = "Movimentação"
+
+[node name="Label4" type="Label" parent="Options/Panel"]
+anchor_left = 0.108
+anchor_top = -4.35
+anchor_right = 1.108
+anchor_bottom = -4.35
+margin_left = -147.733
+margin_top = 1833.35
+margin_right = -147.733
+margin_bottom = 1849.35
+custom_fonts/font = SubResource( 4 )
+text = "Passar Diálogo"
+
+[node name="D" type="Sprite" parent="Options/Panel"]
+position = Vector2( -145.345, -28.8668 )
+scale = Vector2( 2.7951, 2.22052 )
+texture = ExtResource( 8 )
+
+[node name="E" type="Sprite" parent="Options/Panel"]
+position = Vector2( -198.452, 39.9694 )
+scale = Vector2( 2.7951, 2.22052 )
+texture = ExtResource( 5 )
+
+[node name="S" type="Sprite" parent="Options/Panel"]
+position = Vector2( -198.452, -28.8668 )
+scale = Vector2( 2.7951, 2.22052 )
+texture = ExtResource( 4 )
+
+[node name="Sprite-0012" type="Sprite" parent="Options/Panel"]
+position = Vector2( -251.559, -28.8668 )
+scale = Vector2( 2.7951, 2.22052 )
+texture = ExtResource( 9 )
+
+[node name="W" type="Sprite" parent="Options/Panel"]
+position = Vector2( -198.452, -71.0567 )
+scale = Vector2( 2.7951, 2.22052 )
+texture = ExtResource( 6 )
+
+[node name="Escape" type="Sprite" parent="Options/Panel"]
+position = Vector2( -198.452, 115.467 )
+scale = Vector2( 2.7951, 2.22052 )
+texture = ExtResource( 7 )
