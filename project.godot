@@ -51,12 +51,14 @@ _global_script_class_icons={
 [application]
 
 config/name="Universalis"
-run/main_scene="res://scenes/Cena1.tscn"
+run/main_scene="res://scenes/Menu.tscn"
 config/icon="res://icon.png"
 
 [autoload]
 
 TransitionScreen="*res://scenes/TransitionScreen.tscn"
+Utils="*res://scripts/Utils.gd"
+ListDialog="*res://scripts/ListDialog.gd"
 
 [display]
 

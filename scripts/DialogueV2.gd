@@ -49,4 +49,4 @@ func show_dialog():
 		timer.start(wait_time)
 		yield(timer, "timeout")
 	
-	can_skip_dialog = false
+	can_skip_dialog = true
