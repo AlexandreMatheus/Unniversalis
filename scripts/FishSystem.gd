@@ -1,4 +1,4 @@
-extends Node2D
+extends CanvasLayer
 
 onready var textureProgress: ProgressBar = $ProgressBar
 onready var player: KinematicBody2D = $PlayerFish

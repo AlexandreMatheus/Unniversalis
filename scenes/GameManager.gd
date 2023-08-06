@@ -10,9 +10,8 @@ func _ready():
 func _input(event):
 	if event.is_action_pressed("INTERACT") and fish:
 		fish = false
-		$".".add_child(load(fish_scene).instance())
-		print($".".get_children())
-	
+		$'.'.add_child(load(fish_scene).instance())
+
 func delete_fish():
 	$".".get_children().back().queue_free()
 

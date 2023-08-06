@@ -17,7 +17,7 @@ func _physics_process(delta):
 		velocity.x -= speed
 	if Input.is_action_pressed("ui_right"):
 		velocity.x += speed
-		
+
 	if velocity == Vector2.ZERO:
 		$AnimationTree.get("parameters/playback").travel("Idle")
 	else:
