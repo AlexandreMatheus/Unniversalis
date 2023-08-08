@@ -13,6 +13,7 @@ func _ready():
 	$MenuBackgorund2/AnimationPlayer.play("Idle")
 	$Terran/AnimationPlayer.play("Idle")
 	set_language()
+
 	for button in $Menu/ButtonContainer.get_children():
 		button.connect("pressed", self, "on_button_pressed", [button.name])
 		button.connect("mouse_exited", self, "mouse_interaction", [button, "exited"])

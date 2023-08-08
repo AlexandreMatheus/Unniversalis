@@ -1,4 +1,4 @@
-[gd_scene load_steps=131 format=2]
+[gd_scene load_steps=138 format=2]
 
 [ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=1]
 [ext_resource path="res://resources/TileSet/Forest Cliff.png" type="Texture" id=2]
@@ -14,6 +14,10 @@
 [ext_resource path="res://resources/Sprites/cats.png" type="Texture" id=12]
 [ext_resource path="res://scenes/GameManager.gd" type="Script" id=13]
 [ext_resource path="res://resources/Sprites/shipCrash.png" type="Texture" id=14]
+[ext_resource path="res://resources/Sprites/ship.png" type="Texture" id=15]
+[ext_resource path="res://resources/Sprites/catspy2.png" type="Texture" id=16]
+[ext_resource path="res://resources/Sprites/catspy1.png" type="Texture" id=17]
+[ext_resource path="res://resources/Sprites/catspy3.png" type="Texture" id=18]
 
 [sub_resource type="ConvexPolygonShape2D" id=2]
 points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
@@ -2002,6 +2006,233 @@ points = PoolVector2Array( 0, 0, 16, 0, 16, 16, 0, 16 )
 6/shapes = [  ]
 6/z_index = 0
 
+[sub_resource type="Animation" id=117]
+resource_name = "FadeInCats"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Catspy1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Catspy2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Catspy3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Catspy4:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Catspy5:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Catspy6:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="Animation" id=118]
+resource_name = "FadeOutCats"
+length = 0.4
+tracks/0/type = "value"
+tracks/0/path = NodePath("Catspy1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Catspy2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Catspy3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Catspy4:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Catspy5:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Catspy6:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.4 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="Animation" id=119]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Catspy1:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Catspy2:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Catspy3:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Catspy4:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Catspy5:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Catspy6:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0 ) ]
+}
+
 [sub_resource type="ConvexPolygonShape2D" id=116]
 points = PoolVector2Array( 40, 88, 24, 88, 24, 80, 40, 80 )
 
@@ -2110,7 +2341,44 @@ format = 1
 tile_data = PoolIntArray( 458739, 2, 0, 458740, 2, 1, 458741, 2, 2, 458747, 1, 0, 458748, 1, 1, 458749, 1, 1, 458750, 1, 2, 524275, 2, 65536, 524276, 2, 65537, 524277, 2, 65538, 524283, 1, 65536, 524284, 1, 65537, 524285, 1, 65537, 524286, 1, 65538, 589811, 2, 131072, 589812, 2, 131073, 589813, 2, 131074, 589815, 0, 1, 589817, 0, 0, 589819, 1, 131072, 589820, 1, 131073, 589821, 1, 131073, 589822, 1, 131074, 655351, 0, 65536, 655353, 0, 65536, 655355, 1, 131072, 655356, 1, 131073, 655357, 1, 131073, 655358, 1, 131074, 720883, 2, 196608, 720884, 2, 196609, 720885, 2, 196610, 720889, 3, 1, 720890, 4, 0, 720891, 1, 196608, 720892, 1, 196609, 720893, 1, 196609, 720894, 1, 196610, 720895, 3, 0, 786419, 2, 262144, 786420, 2, 262145, 786421, 2, 262146, 786425, 3, 65537, 786426, 3, 65537, 786427, 1, 262144, 786428, 1, 262145, 786429, 1, 262145, 786430, 1, 262146, 786431, 3, 65536 )
 
 [node name="Player" parent="." instance=ExtResource( 1 )]
-position = Vector2( -700, 1184 )
+position = Vector2( -689, 1130 )
+
+[node name="CatsSpy" type="Node2D" parent="."]
+
+[node name="Catspy1" type="Sprite" parent="CatsSpy"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -697, 1058 )
+texture = ExtResource( 17 )
+
+[node name="Catspy2" type="Sprite" parent="CatsSpy"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -743, 1079 )
+texture = ExtResource( 16 )
+
+[node name="Catspy3" type="Sprite" parent="CatsSpy"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -781, 1088 )
+texture = ExtResource( 18 )
+
+[node name="Catspy4" type="Sprite" parent="CatsSpy"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -830, 1102 )
+texture = ExtResource( 17 )
+
+[node name="Catspy5" type="Sprite" parent="CatsSpy"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -554, 1054 )
+texture = ExtResource( 16 )
+
+[node name="Catspy6" type="Sprite" parent="CatsSpy"]
+modulate = Color( 1, 1, 1, 0 )
+position = Vector2( -622, 1055 )
+texture = ExtResource( 18 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CatsSpy"]
+anims/FadeInCats = SubResource( 117 )
+anims/FadeOutCats = SubResource( 118 )
+anims/RESET = SubResource( 119 )
 
 [node name="Arvores" type="TileMap" parent="."]
 tile_set = SubResource( 11 )
@@ -2136,10 +2404,18 @@ fish_scene = "res://scenes/FishSystem.tscn"
 notification_scene = "res://scenes/Notification.tscn"
 
 [node name="ShipCrash" type="Sprite" parent="."]
-position = Vector2( -728, 1194 )
+position = Vector2( -706, 1163 )
 rotation = 0.469057
 texture = ExtResource( 14 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="DialogueBox" parent="CanvasLayer" instance=ExtResource( 11 )]
+
+[node name="Ship" type="Sprite" parent="."]
+position = Vector2( -741, 561 )
+rotation = 1.57249
+scale = Vector2( 5.53125, 5.53125 )
+texture = ExtResource( 15 )
+
+[node name="Timer" type="Timer" parent="."]
